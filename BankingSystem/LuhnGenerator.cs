@@ -4,8 +4,6 @@ namespace BankingSystem;
 
 static class LuhnGenerator
 {
-    
-    
     public static string GenerateCardNumber()
     {
 
