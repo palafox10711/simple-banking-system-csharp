@@ -15,7 +15,9 @@ class Program
             repository.Save(acount);
             System.Console.WriteLine(card);
         }
-        
+        var found = repository.FindByCardNumber("4427163735981022");
+        Console.WriteLine(found?.CardNumber);
+
 
     }
 }
