@@ -3,6 +3,8 @@ namespace BankingSystem;
 using Microsoft.Data.SqlClient;
 using System.ComponentModel.Design;
 using System.Data;
+using System.Net.Sockets;
+
 class AccountRepository(Database db)
 {
     private readonly Database _db = db;
@@ -40,4 +42,21 @@ class AccountRepository(Database db)
         }
         return null;
     }
+
+    public bool Exists(string card)
+    {
+        using var connection = _db.GetConnection();
+        connection.Open();
+
+        using var command = new SqlCommand(
+            "SELECT COUNT(*) FROM card WHERE card_number = @card", connection
+        );
+        command.Parameters.Add("@card", SqlDbType.NVarChar,16).Value = card;
+
+        var count = (int)command.ExecuteScalar();
+        return count > 0;
+
+        
+    }
+
 }

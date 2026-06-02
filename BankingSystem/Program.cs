@@ -17,7 +17,10 @@ class Program
         }
         var found = repository.FindByCardNumber("4427163735981022");
         Console.WriteLine(found?.CardNumber);
+        Console.WriteLine(repository.Exists("4427163735981022")); // true
+        Console.WriteLine(repository.Exists("0000000000000000")); // false
 
 
     }
+    
 }
