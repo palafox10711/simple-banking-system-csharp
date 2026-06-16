@@ -3,7 +3,7 @@ namespace BankingSystem;
 using Microsoft.Data.SqlClient;
 
 
-class Database
+public class Database
 {
     private readonly string _connectionString;
     

@@ -1,8 +1,6 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace BankingSystem;
 
-static class LuhnGenerator
+public static class LuhnGenerator
 {
     public static string GenerateCardNumber()
     {

@@ -1,0 +1,10 @@
+
+
+POST http://localhost:5079/account/transfer
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgiLCJ1c2VybmFtZSI6ImVyaWNrMTIzNCIsImV4cCI6MTc4MTU3Mjg2NX0.ZcJp8CqmkjOWVL00xNeNxDH5h9jgFupf9VVjYOL92fE
+
+{
+  "amount": 700,
+  "cardNumber": "2218078558004297"
+}
